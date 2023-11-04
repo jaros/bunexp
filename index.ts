@@ -2,6 +2,17 @@ console.log("Hello via Bun!");
 import { Database } from "bun:sqlite";
 const db = new Database(":memory:");
 
+import { Client } from '@elastic/elasticsearch';
+const client = new Client({
+  node: 'https://...', // Elasticsearch endpoint
+  auth: {
+    apiKey: { // API key ID and secret
+      id: 'foo',
+      api_key: 'bar',
+    }
+  }
+})
+
 const server = Bun.serve({
     port: 3000,
     fetch(request: Request) {
