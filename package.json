@@ -1,14 +1,11 @@
 {
   "name": "bunexp",
   "module": "index.ts",
-  "type": "module",
   "devDependencies": {
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "dependencies": {
-    "@elastic/elasticsearch": "^8.10.0"
-  }
+  "type": "module"
 }
